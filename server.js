@@ -8,12 +8,12 @@ const server = http.createServer(app)
 const expressLayout = require('express-ejs-layouts')
 
 
-
 app.set('view engine', 'ejs')
 app.set('layout', 'layouts/layout')
 app.use(expressLayout)
 app.use(express.static('public'))
 
+app.use(express.urlencoded({ extended: false }))
 app.use('/auth', require('./controllers/auth'))
 
 app.use('/', (req, res) => {

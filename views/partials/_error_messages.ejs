@@ -1,0 +1,11 @@
+<% if(typeof errors!='undefined'){%>
+  <div class="alert alert-dismissible alert-warning">
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    <h4 class="alert-heading">Error!</h4>
+    <% errors.forEach(err => {%>
+      <p class="mb-0">
+        <%= err.msg %>
+      </p>
+      <%})%>
+  </div>
+  <%}%>
