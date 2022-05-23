@@ -1,0 +1,23 @@
+<div class="row mt-5">
+  <!-- <h1 class="text-muted">Dashboard</h1> -->
+  <div class="col-md-3">
+    <%- include('./partials/_sidemenu.ejs') %>
+  </div>
+  <div class="col-md-9">
+    <% switch (page) {
+      case 'dashboard': %>
+      <%- include('./partials/_blog_list.ejs') %>
+        <% break;
+      case 'editor': %>
+          <%- include('./partials/_editor.ejs') %>
+            <% break;
+      case 'articles': %>
+              <%- include('./partials/_articles.ejs') %>
+                <% break;
+      case 'article': %>
+                  <%- include('./partials/_article.ejs') %>
+                    <% break;
+      } %>
+
+  </div>
+</div>

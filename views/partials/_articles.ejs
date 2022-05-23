@@ -1,0 +1,19 @@
+<% articles.forEach(article=>{%>
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">
+        <%=article.title%>
+      </h4>
+      <h6 class="card-subtitle mb-2 text-muted position-relative">
+        <%=article.author.displayName%>
+          <span class="position-absolute bottom-50 end-0"><%- formatDate(article.createdAt, 'MMMM Do YYYY')%></span>
+      </h6>
+      <p class="card-text">
+        <%-truncate(stripHTML(article.article), 250)%>
+          <a href="/article/<%=article._id%>" class="card-link">Read More</a>
+      </p>
+      <!-- <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a> -->
+    </div>
+  </div>
+  <%})%>

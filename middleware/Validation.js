@@ -14,7 +14,7 @@ module.exports = {
       if (errors.length > 0) {
         reject(errors)
       } else {
-        resolve(true)
+        resolve(body)
       }
     })
   }

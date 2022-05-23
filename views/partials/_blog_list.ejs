@@ -1,0 +1,37 @@
+<div class="card">
+  <% if(typeof articles!='undefined'&&articles.length>0){%>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Title</th>
+          <th scope="col">Status</th>
+          <th scope="col">Date Created</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% articles.forEach(article=>{%>
+          <tr>
+            <td>
+              <a href="/article/<%=article._id%>" class="card-link">
+                <%= article.title %>
+              </a>
+            </td>
+            <td>
+              <%= article.status %>
+            </td>
+            <td>
+              <%- formatDate(article.createdAt, 'MMMM Do YYYY') %>
+            </td>
+            <td>
+              <a href="/article/edit/<%=article._id%>" class="btn btn-sm btn-success rounded-circle" title="Edit"><i class="fa fa-pen"></i></a>
+              <a href="/article/delete/<%=article._id%>" class="btn btn-sm btn-danger rounded-circle" title="Delete"><i class="fa fa-trash"></i></a>
+            </td>
+          </tr>
+          <%})%>
+      </tbody>
+    </table>
+    <%}else{%>
+      <p>You have no articles</p>
+      <%}%>
+</div>
