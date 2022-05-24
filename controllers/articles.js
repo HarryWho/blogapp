@@ -61,4 +61,9 @@ router.put('/:articleID', async(req, res) => {
   res.redirect('/dashboard')
 })
 
+router.delete('/:articleID', async(req, res) => {
+
+  await Article.findByIdAndDelete(req.params.articleID)
+  res.redirect('/dashboard')
+})
 module.exports = router;
