@@ -14,7 +14,8 @@ router.get('/', async(req, res) => {
   res.render('dashboard', {
     user: req.user,
     page: 'articles',
-    articles: articles
+    articles: articles,
+    caption: 'Create'
   })
 })
 
@@ -25,7 +26,8 @@ router.get('/:articleID', async(req, res) => {
   res.render('dashboard', {
     user: req.user,
     page: 'article',
-    article: article
+    article: article,
+    caption: 'Create'
   })
 
 })

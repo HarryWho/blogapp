@@ -7,7 +7,8 @@ router.get('/', async(req, res) => {
   res.render('dashboard', {
     user: req.user,
     page: 'dashboard',
-    articles: articles
+    articles: articles,
+    caption: 'Create'
   })
 })
 

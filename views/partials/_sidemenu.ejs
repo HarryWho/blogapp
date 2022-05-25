@@ -1,11 +1,9 @@
 <div class="card mb-3">
-
   <div class="list-group">
     <a href="/dashboard" class="list-group-item list-group-item-action <%- page==='dashboard' ? 'active': '' %>">Dashboard</a>
-    <a href="/article/create" class="list-group-item list-group-item-action <%- page==='editor' ? 'active': '' %>">Create Article</a>
-    <a href="/article" class="list-group-item list-group-item-action <%- page==='articles' ? 'active': '' %>">Articles</a>
+    <a href="/article/create" class="list-group-item list-group-item-action <%- page==='editor' ? 'active': '' %>">
+      <%=caption%> Article</a>
+    <a href="/article" class="list-group-item list-group-item-action <%- page==='articles' || page==='article' ? 'active': '' %>">Articles</a>
     <a href="#" class="list-group-item list-group-item-action disabled">Morbi leo risus</a>
   </div>
-
-
 </div>
